@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        <%= perfil.nomeCompleto %>
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                <%= perfil.nomeCompleto %>
+            </h1>
+            <p class="subtitle">
+                <%= perfil.curso %>
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="fixed-grid">
+                <div class="grid has-2-cols">
+                    <% certificados.forEach(certificado=> {%>
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <%= certificado.nome %> - <%= certificado.duracao %>h
+                                </p>
+
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <%= certificado.descricao%>
+                                  
+                                    <% const dataISO=certificado.dataEmissao.split('/').reverse().join('-'); %>
+
+                                        <time datetime="<%= dataISO %>">
+                                            <%= certificado.dataEmissao %>
+                                        </time>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
