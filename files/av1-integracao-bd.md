@@ -30,7 +30,23 @@ npm install pg
 
 > **Atenção:** devido ao Proxy da escola, o PostgreSQL/Render deve ser instalado e utilizado fora do ambiente da escola.
 
-## 3. Banco
+## 3. Pesquisa — Arquitetura
+
+Antes de iniciar a implementação, **pesquise e compreenda os conceitos** da arquitetura utilizada no projeto:
+
+```text
+Router → Controller → Service → Repository → Banco de Dados
+```
+
+Pesquise e responda:
+
+1. O que são **Routes (Rotas)**?
+2. O que são **Controllers**?
+3. O que são **Services**?
+4. O que são **Repositories**?
+5. **Compreenda o fluxo entre as camadas da arquitetura.**
+
+## 4. Banco
 
 Crie as tabelas:
 
@@ -57,7 +73,7 @@ perfil 1:N certificados
 
 O banco deve possuir **dados iniciais**.
 
-## 4. MER
+## 5. MER
 
 Crie o **Modelo Entidade-Relacionamento (MER)** correspondente ao banco.
 
@@ -67,7 +83,7 @@ Salve no projeto:
 docs/mer.png
 ```
 
-## 5. Estrutura do Projeto
+## 6. Estrutura do Projeto
 
 A estrutura deve seguir:
 
@@ -110,7 +126,7 @@ A estrutura deve seguir:
 
 O `.env` **não deve ser enviado para o GitHub**.
 
-## 6. Portfolio
+## 7. Portfolio
 
 A rota principal será:
 
@@ -145,7 +161,7 @@ CursoService → CursoRepository
 CertificadoService → CertificadoRepository
 ```
 
-## 7. Repository
+## 8. Repository
 
 Os Repositories são responsáveis pelo acesso ao banco.
 
@@ -153,7 +169,7 @@ Os Repositories são responsáveis pelo acesso ao banco.
 
 Quando necessário, utilize `JOIN` nas consultas SQL.
 
-## 8. `banco.sql`
+## 9. `banco.sql`
 
 O arquivo:
 
@@ -170,7 +186,7 @@ deve conter:
 
 Não utilize mais o `db.js`.
 
-## 9. Conexão
+## 10. Conexão
 
 Crie:
 
@@ -182,7 +198,7 @@ Utilize o arquivo `.env` para armazenar as configurações de conexão com o ban
 
 **Não envie o `.env` para o GitHub.**
 
-## 10. GitHub
+## 11. GitHub
 
 O projeto deve estar hospedado no GitHub.
 
@@ -206,7 +222,7 @@ O `README.md` deve informar:
 * execução;
 * estrutura do projeto.
 
-## 11. Desafio Plus — Firebase
+## 12. Desafio Plus — Firebase
 
 Implemente uma versão utilizando Firebase.
 
@@ -216,7 +232,7 @@ Mantenha a arquitetura:
 Router → Controller → Service → Repository → Firebase
 ```
 
-## 12. Horários
+## 13. Horários
 
 | **Hor**   | **Seg**       | **Ter**       | **Qua** | **Qui**      | **Sex**      |
 | --------- | ------------- | ------------- | ------- | ------------ | ------------ |
@@ -226,19 +242,5 @@ Router → Controller → Service → Repository → Firebase
 | **10:05** | COORD         | COORD         | COORD   | COORD        | COORD        |
 | **10:55** | COORD         | 3ºDS-B/CDADOS | COORD   | COORD        | 3ºDS-C/PMOBI |
 | **11:45** | COORD         | 3ºDS-B/CDADOS | -       | COORD        | 3ºDS-C/PMOBI |
-
-## 13. Questionário — Google Sala de Aula
-
-Pesquise e responda:
-
-1. O que são **Routes (Rotas)**?
-2. O que são **Controllers**?
-3. O que são **Services**?
-4. O que são **Repositories**?
-5. **Explique o fluxo de uma requisição entre as camadas da arquitetura.**
-
-```text
-Router → Controller → Service → Repository → Banco de Dados
-```
 
 > *“A mente que se abre a uma nova ideia jamais volta ao seu tamanho original.”* — **Albert Einstein**
